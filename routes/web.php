@@ -30,7 +30,11 @@ Route::get('/motor/{jenis}', function($jenis) {
     return "Motor dengan jenis" .$jenis;
 });
 */
-Route::get('/motor/{jenis?}', function($jenis=null) {
+Route::get('/motor/{jenis?}',function($jenis=null){
     if($jenis == null) return "Motor Dashboard Page";
-    return "Motor dengan jenis :" .$jenis;
+    return "Motor dengan jenis ".$jenis;
+});
+
+Route::get('/test', function () {
+    return "Test";
 });
