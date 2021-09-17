@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\SiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,4 @@ Route::get('/test', function () {
 
 Route::get('/book', [BookController::class, 'index']);
 Route::get('/vbook/{judul}', [BookController::class, 'viewJudul']);
+Route::resource('siswa', SiswaController::class);
